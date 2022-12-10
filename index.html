@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+
+        <!-- Bootstrap core CSS -->
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+  </head>
+
+  <body class="container">
+    <div class="container-fluid">
+      <div class="container">
+        <div>
+          <h1 class="text-center mb-5 shadow-sm p-3">TO-DO LIST</h1>
+
+          <div class="row">
+            <div class="col-md-7 shadow rounded p-5">
+              <div class="row">
+
+                <!-- Form -->
+                <form id="todo" class="row g-3">
+                  <div class="col-md-6">
+                    <label for="new-start-date" class="form-label"
+                      >Start Date</label
+                    >
+                    <input
+                      type="date"
+                      class="form-control"
+                      id="new-start-date"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="new-end-date" class="form-label"
+                      >End Date</label
+                    >
+                    <input type="date" class="form-control" id="new-end-date" />
+                  </div>
+
+                  <div class="col-md-12">
+                    <label for="new-task" class="form-label">Task</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="new-task"
+                      placeholder="Add new task"
+                    />
+                  </div>
+
+                  <div class="col-12">
+                    <button class="btn btn-info" id="add" type="button">
+                      Create New Task
+                    </button>
+                    <button class="btn btn-primary" id="clear" type="button">
+                      Clear All Tasks
+                    </button>
+                  </div>
+                </form>
+
+                <div class="row"></div>
+              </div>
+            </div>
+            <div class="col-md">
+              <div class="m-lg-5">
+                <img
+                  src="https://images-stylist.s3-eu-west-1.amazonaws.com/app/uploads/2021/10/30090830/gettyimages-1298394219.jpg"
+                  alt="Image"
+                  class="img-fluid"
+                />
+              </div>
+            </div>
+
+            <!-- Table -->
+            <table id="list" class="table table-info table-striped text-center">
+              <thead>
+                <tr>
+                  <th>Task</th>
+                  <th>Date Created</th>
+                  <th>Start Date</th>
+                  <th>Due Date</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+       <!-- Bootstrap core JavaScript -->
+    <script src="index.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  </body>
+</html>
